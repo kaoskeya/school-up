@@ -1,0 +1,50 @@
+<template name="navbar">
+<div class="contain-to-grid">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">SchoolUp</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        {{#if currentUser}}
+        <li class="has-dropdown">
+          <a href="#">
+            <span class="fi-torso nav">
+              <span>{{currentUser.profile.name}}</span>
+            </span>
+          </a>
+          <ul class="dropdown">
+              <li><a href="/sign-out">Sign Out</a></li>
+          </ul>
+        </li>
+        {{else}}
+        <li class="has-dropdown">
+          <a href="#">
+            <span class="fi-torso nav">
+              <span>Sign In / Sign Up</span>
+            </span>
+          </a>
+          <ul class="dropdown">
+            <li>
+              <a href="{{pathFor 'sign-in'}}">Parent Login</a>
+            </li>
+            <li>
+              <a href="{{pathFor 'school-sign-in'}}">School Login</a>
+            </li>
+          </ul>
+        </li>
+
+
+
+
+        {{/if}}
+      </ul>
+    </section>
+  </nav>
+</div>
+</template>

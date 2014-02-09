@@ -1,0 +1,83 @@
+<Template name="school_dashboard">
+
+<br />
+<br />
+<br />
+
+
+<div class="row">
+
+    <div class="row">
+      <div class="small-7 columns">
+        <div class="server-message text-center hide">
+        </div>
+      </div>
+    </div>
+
+    <form method="POST" id="create_account" data-abide>
+      
+    <h3>Account Settings</h3>
+
+      <div class="row">
+        <div class="small-7 columns">
+          <label>School Name <small>Required</small></label>
+          <input type="text" name="organization" class=""
+            placeholder="Enter Organization" required>
+          <small class="error">Required field</small>
+
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="small-7 columns">
+          <label>Application Cost <small>Required</small></label>
+          <input type="number" name="application_cost" class=""
+            placeholder="Enter Application Cost" required min=0>
+          <small class="error">Required field</small>
+        </div>
+      </div>
+
+    <h3>API Settings</h3>
+
+
+      <div class="row">
+        <div class="small-7 columns">
+          <label>API Access User <small>Required</small></label>
+          <input type="text" name="access_user" class=""
+            placeholder="Enter Access User" required>
+          <small class="error">Required field</small>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-7 columns">
+          <label>API Access Key <small>Required</small></label>
+          <input type="text" name="access_key" class=""
+            placeholder="Enter Access Key" required>
+          <small class="error">Required field</small>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-7 columns">
+          <label>API Endpoint <small>Required</small></label>
+          <input type="text" name="api_endpoint" class=""
+            placeholder="Enter API endpoint" required min=0>
+          <small class="error">Required field</small>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-4 columns">
+          <input type="submit" name="create-submit" value="Submit"
+            class="button small">
+        </div>
+      </div>
+
+    </form>
+</div>
+
+</Template>

@@ -1,0 +1,51 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "iron-router": {},
+      "nprogress": {},
+      "roles": {},
+      "stripe": {},
+      "jquery": {
+        "git": "https://github.com/deepu-tp/meteor-jquery.git",
+        "branch": "master"
+      },
+      "foundation-scss": {
+        "git": "https://github.com/deepu-tp/meteor-foundation-scss",
+        "branch": "master"
+      }
+    },
+    "packages": {
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.6.2",
+        "commit": "ce56e58b45624dce992490f3a1c10f10d3948bae"
+      },
+      "nprogress": {
+        "git": "https://github.com/zhouzhuojie/meteor-nprogress.git",
+        "tag": "v0.0.3",
+        "commit": "ffd1c5dd400af64121197f4e637a215c4b6b1fc7"
+      },
+      "roles": {
+        "git": "https://github.com/alanning/meteor-roles.git",
+        "tag": "v1.2.6",
+        "commit": "f2a9058281f8f2fe028767841d7445aadd6893cf"
+      },
+      "stripe": {
+        "git": "https://github.com/appleifreak/stripe-meteor.git",
+        "tag": "v1.5.1",
+        "commit": "76e270b78f5a48017e453f13c544d071cdfefdee"
+      },
+      "jquery": {
+        "git": "https://github.com/deepu-tp/meteor-jquery.git",
+        "branch": "master",
+        "commit": "e290e94f577e9f8060bbe37240e22d8eac9a694a"
+      },
+      "foundation-scss": {
+        "git": "https://github.com/deepu-tp/meteor-foundation-scss",
+        "branch": "master",
+        "commit": "9eba01318b87c1389ce7f1147c9961e9c93f079b"
+      }
+    }
+  }
+}

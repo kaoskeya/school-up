@@ -1,0 +1,173 @@
+<Template name="login">
+
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>SchoolUp! <small>beta</small></h1>
+      <p>Your one solution for submitting your student applications to multiple schools.</p>
+    </div>
+  </div>
+
+  <section id="login" class="">
+    <div class="row">
+      <div id="create_account_panel" class="small-8 columns">
+        <h3 class="column-title">Don't have an account?</h3>
+
+
+        <div class="row">
+          <div class="small-10 columns">
+            <div class="server-message text-center hide">
+            </div>
+          </div>
+        </div>
+
+        <form method="POST" id="create_account" data-abide>
+          <div class="row">
+            <div class="small-12 columns">
+              <label>Name <small>Required</small></label>
+              <input type="text" name="name" class=""
+                placeholder="Enter Name" required>
+              <small class="error">Required field</small>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-6 columns">
+              <label>Email <small>Required</small></label>
+              <input type="text" name="email_id" class=""
+                placeholder="Enter Email ID" required pattern="email">
+              <small class="error">Please enter a valid Email ID</small>
+
+            </div>
+
+            <div class="small-6 columns">
+              <label>Contact Number <small>Required</small></label>
+              <input type="text" name="phone" class=""
+                placeholder="Enter Contact Number" required>
+              <small class="error">Required field</small>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-4 columns">
+              <input type="submit" name="create-submit" value="Create Account"
+                class="button small">
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div id="forgot_panel" class="small-4 columns hide">
+        <h3 class="column-title">Forgot Password?</h3>
+
+
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="server-message text-center hide">
+            </div>
+          </div>
+        </div>
+
+        <form method="POST" id="forgot_password">
+          <div class="row">
+            <div class="small-12 columns">
+              <label>Email ID</label>
+              <input type="text" name="email"
+                placeholder="Enter Email ID">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-12 columns">
+              <label>
+                <a href="#" id="back_button">
+                  Back
+                </a>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-4 columns">
+              <input type="submit" name="forgot-submit" value="Reset Password"
+                class="button small">
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+
+      <div id="login_panel" class="small-4 columns">
+        <h3 class="column-title">Sign In</h3>
+
+
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="server-message text-center hide">
+            </div>
+          </div>
+        </div>
+
+        <form method="POST" id="sign-in">
+          <div class="row">
+            <div class="small-12 columns">
+              <label>Email ID</label>
+              <input type="text" name="email"
+                placeholder="Enter Email ID">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-12 columns">
+              <label>Password</label>
+              <input type="password" name="password"
+                placeholder="Enter Password">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-12 columns">
+              <label>
+                <a href="#" id="forgot_password_button">
+                  Forgot your password?
+                </a>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-4 columns">
+              <input type="submit" name="login-submit" value="Sign In"
+                class="button small">
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+</section>
+
+  <div class="row">
+    <div class="large-4 columns">
+      <p>
+        <a href="#">How it works?</a><br />
+        Everything you need to know about using the framework.</p>
+    </div>
+    <div class="large-4 columns">
+      <p>
+        <a href="http://github.com/zurb/foundation">How safe is my data?</a><br />
+        Latest code, issue reports, feature requests and more.</p>
+    </div>
+    <div class="large-4 columns">
+      <p>
+        <a href="http://twitter.com/foundationzurb">Why free?</a><br />
+        Ping us on Twitter if you have questions. If you build something with this we'd love to see it.</p>
+    </div>
+  </div>
+
+
+
+</Template>

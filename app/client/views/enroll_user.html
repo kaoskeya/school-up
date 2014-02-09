@@ -1,0 +1,44 @@
+<template name="enroll_user">
+  <section id="login" class="default-bgc">
+    <div class="row">
+      <div class="small-8 columns right-bordered">
+        <h4 class="column-title">Please set a password for your account</h4>
+
+        <div class="row">
+          <div class="small-10 columns">
+            <div class="server-message text-center hide">
+            </div>
+          </div>
+        </div>
+
+        <form method="POST" id="enroll_user" data-abide>
+          <div class="row">
+						<div class="small-5 columns">
+			        <label for="password">Password <small>required</small></label>
+			        <input type="password" id="password"
+			        placeholder="Enter Password" name="password" required="">
+			        <small class="error">Passwords must be at least 8 
+			        	characters with 1 capital letter, 1 number 
+			        	and one special character.</small>
+			      </div>
+						<div class="small-5 columns left">
+			        <label for="confirmPassword">Confirm Password
+			        	<small>required</small>
+			        </label>
+			        <input type="password" id="confirmPassword" 
+			        placeholder="Enter Password again" name="confirmPassword" 
+			        required="" data-equalto="password">
+			        <small class="error">Passwords must match.</small>
+		      </div>
+          </div>
+
+          <div class="row">
+            <div class="small-4 columns">
+              <input type="submit" name="enroll-submit" value="Set Password"
+                class="button small">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+</template>

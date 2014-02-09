@@ -1,0 +1,14 @@
+{
+  "packages": {
+    "iron-router": {},
+    "nprogress": {},
+    "roles": {},
+    "stripe": {},
+    "jquery": {
+      "git": "https://github.com/deepu-tp/meteor-jquery.git"
+    },
+    "foundation-scss": {
+      "git": "https://github.com/deepu-tp/meteor-foundation-scss"
+    }
+  }
+}
