@@ -1,0 +1,253 @@
+<template name="parents_dashboard">
+
+    <br />
+
+    <div id="add_ward_section" class="{{hide_add_ward}}">
+
+    <!-- When no profle is created -->
+    <div class="panel">
+        <div class="row">
+            <div class="large-12 columns">
+                <h3>User Profile Creation.</h3>
+                <p>Please submit the form below to create a profile.</p>
+            </div>
+        </div>
+    </div>
+    <!-- END: When no profle is created -->
+
+    <div class="row">
+        <div class="large-12 columns">
+
+        <form method="POST" id="create_account" data-abide>
+          <div class="row">
+            <div class="small-12 columns">
+              <label>Name <small>Required</small></label>
+              <input type="text" name="name" class=""
+                placeholder="Enter Name" required>
+              <small class="error">Required field</small>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-6 columns">
+              <label>Date of Birth <small>Required</small></label>
+              <input type="date" name="dob" class="" min=0
+                placeholder="Enter DOB" required>
+              <small class="error">Required Field</small>
+
+            </div>
+
+            <div class="small-6 columns">
+              <label>Sex <small>Required</small></label>
+              <select id="sex">
+                  <option value="F">Female</option>}
+                  <option value="M">Male</option>
+              </select>
+
+
+              <small class="error">Required field</small>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-12 columns">
+              <label>Birth Place <small>Required</small></label>
+              <input type="text" name="pob" class=""
+                placeholder="Enter Birth Place" required>
+              <small class="error">Required field</small>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="small-12 columns">
+              <label>Religion <small>Required</small></label>
+              <input type="text" name="religion" class=""
+                placeholder="Enter Religion" required>
+              <small class="error">Required field</small>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="small-4 columns">
+              <label>Parent 1 : Name <small>Required</small></label>
+              <input type="text" name="p1n" class=""
+                placeholder="Enter Name" required>
+              <small class="error">Required field</small>
+            </div>
+
+
+            <div class="small-4 columns">
+              <label>Parent 1 : Phone <small>Required</small></label>
+              <input type="text" name="p1p" class=""
+                placeholder="Enter Phone Number" required>
+              <small class="error">Required field</small>
+            </div>
+
+            <div class="small-4 columns">
+              <label>Parent 1 : Email <small>Required</small></label>
+              <input type="text" name="p1e" class=""
+                placeholder="Enter Email" required patter="email">
+              <small class="error">Required field</small>
+            </div>
+
+
+          </div>
+
+
+          <div class="row">
+            <div class="small-4 columns">
+              <label>Parent 2 : Name <small>Required</small></label>
+              <input type="text" name="p2n" class=""
+                placeholder="Enter Name" required>
+              <small class="error">Required field</small>
+            </div>
+
+
+            <div class="small-4 columns">
+              <label>Parent 2 : Phone <small>Required</small></label>
+              <input type="text" name="p2p" class=""
+                placeholder="Enter Phone Number">
+              <small class="error">Required field</small>
+            </div>
+
+            <div class="small-4 columns">
+              <label>Parent 2 : Email <small>Required</small></label>
+              <input type="text" name="p2e" class=""
+                placeholder="Enter Email" pattern="email">
+              <small class="error">Required field</small>
+            </div>
+
+
+          </div>
+
+
+
+          <div class="row">
+            <div class="small-4 columns">
+              <input type="submit" name="create-submit" value="Add Ward"
+                class="button small">
+            </div>
+          </div>
+
+        </form>
+
+
+        </div>
+    </div>
+    </div>
+
+
+    <!-- When a profile is selected, always show! -->
+    <div class="panel">
+        <div class="row">
+            <div class="large-8 columns">
+                <h3>Selected Profile.</h3>
+                <p>Enter the student name for whom you'd like to purchase applications and submit.</p>
+            </div>
+            <div class="large-4 columns">
+            <a href="#" data-dropdown="drop" class="button small">Selected Profile Name</a><br>
+                <ul id="drop" class="f-dropdown" data-dropdown-content>
+                {{#each wards}}
+                    <li class='ward'>{{name}}</li>
+                {{/each}}
+                <li id="add_ward_option">Add ward</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END: When a profile is selected, always show! -->
+
+
+    {{#with selected_ward}}
+        <div class="row">
+            <h3>{{name}} <small>- buy applications</small></h3>
+                <ul class="small-block-grid-3">
+                    {{#each schools}}
+                    <li>
+                        <ul class="pricing-table">
+                            <li class="title">{{school_name}}</li>
+                            <li class="description">{{address}}</li>
+                            <li class="price">{{application_cost}}</li>
+                            <li class="cta-button"><a id="{{_id}}" class="button" href="#">Select</a></li>
+                        </ul>
+                    </li>
+                    {{/each}}
+                    <!-- END: foreach -->
+                </ul>
+            </div>
+        {{/with}}
+
+
+
+    <!-- THE JOY RIDE; Check the app.js file which kick starts the JoyRide -->
+    <ol class="joyride-list" data-joyride>
+        <li data-text="Next">
+            <h4>How this works?</h4>
+            <p>Create a separate profile for each of your students.</p>
+        </li>
+        <li data-text="Next">
+            <h4>Step 2</h4>
+            <p>Buy school applications by selecting the appropriate student profile.</p>
+        </li>
+        <li data-button="Next">
+            <h4>Step 3</h4>
+            <p>Fill out school specific additional information</p>
+        </li>
+        <li data-button="End">
+            <h4>Final Step</h4>
+            <p>Submit applicaitons to schools and proceed to create additional student profiles.</p>
+        </li>
+    </ol>
+    <!-- End joy ride -->
+
+
+  <div class="row">
+    <div class="large-12 columns">
+      <table width="100%">
+        <thead>
+          <tr>
+            <th>School Name</th>
+            <th width="150">Additional Fields</th>
+            <th width="100">Submission</th>
+            <th width="100">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        {{#each applications}}
+
+          <tr>
+            <td>{{schoolName}}</td>
+            <td><center><i>none</i></center></td>
+            <td>
+              <center><input type="submit" value="Submit" class="button tiny app_submit" /></center>
+            </td>
+            <td>
+              <center>
+                <span class="label">{{status}}</span><br />
+              </center>
+            </td>
+          </tr>
+
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+    <div class="row">
+    {{> payment}}  
+    </div>
+
+</template>
+
+
+<template name="payment">
+    <button>Pay</button>
+</template>

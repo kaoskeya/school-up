@@ -1,0 +1,81 @@
+@import "normalize";
+@import "settings";
+@import "foundation";
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0,0,0,0);
+}
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(0,0,0,0.61);
+  /*-webkit-border-radius: 100px;*/
+}
+
+
+
+
+$bsm-border-color : #D1D1D1;
+$bsm-section-background-color: #F5F5F5;
+
+
+.fi-torso.nav {
+    font-size: 1.5rem;
+    color : $primary_color;
+}
+.fi-torso.nav span {
+    font-size: 0.8rem;
+}
+
+
+.right-bordered {
+    border-right : 1px solid $bsm-border-color;
+}
+
+.left-bordered {
+    border-left : 1px solid $bsm-border-color;
+}
+
+section#login {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.column-title {
+    margin-bottom: 3rem;
+    margin-top:1rem
+}
+
+.dark-bgc {
+    background-color: darken($bsm-section-background-color, 5%);
+}
+
+.default-bgc {
+    background-color: $bsm-section-background-color;
+}
+
+section#login input[type="submit"] {
+    margin-top: 1.5rem;
+}
+
+.server-message {
+  color: white;
+  padding:0.375rem 0.5625rem 0.5625rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-bottom:1rem;
+}
+
+.server-error {
+  background-color: #f04124;
+}
+
+.server-success {
+  background-color: $success_color;
+}
